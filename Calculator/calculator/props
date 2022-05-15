@@ -1,0 +1,10 @@
+# = com/task2/operations/fabric/CommentFabric.java
+DEFINE = com/task2/operations/fabric/DefineFabric.java
+/ = com/task2/operations/fabric/DivideFabric.java
+- = com/task2/operations/fabric/MinusFabric.java
+* = com/task2/operations/fabric/MultiplyFabric.java
++ = com/task2/operations/fabric/PlusFabric.java
+POP = com/task2/operations/fabric/PopFabric.java
+PRINT = com/task2/operations/fabric/PrintFabric.java
+PUSH = com/task2/operations/fabric/PushFabric.java
+SQRT = com/task2/operations/fabric/SqrtFabric.java
