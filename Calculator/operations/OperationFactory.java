@@ -1,7 +1,22 @@
-package com.task2.operations;
+package Calculator.operations;
 
-import com.task2.calculator.Container;
+import Calculator.calculator.Container;
 
-public abstract class OperationFactory {
-    public abstract IOperation makeOperation(Container context);
+public class OperationFactory {
+    public IOperation makeOperation(String operation) {
+        switch (operation) {
+            case "#":
+            case "DEFINE":
+            case "/":
+            case "-":
+            case "*":
+            case "+":
+            case "POP":
+            case "PRINT":
+            case "PUSH":
+            case "SQRT":
+            default: break;
+        }
+        return null;
+    }
 }

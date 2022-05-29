@@ -1,4 +1,4 @@
-package task_0;
+package task_1;
 
 import java.io.*;
 import java.lang.StringBuilder;

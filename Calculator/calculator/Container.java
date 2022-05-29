@@ -1,4 +1,4 @@
-package com.task2.calculator;
+package Calculator.calculator;
 
 import java.util.Map;
 import java.util.Stack;

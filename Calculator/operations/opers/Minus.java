@@ -1,7 +1,7 @@
-package com.task2.operations.domain;
+package Calculator.operations.opers;
 
-import com.task2.calculator.Container;
-import com.task2.operations.IOperation;
+import Calculator.calculator.Container;
+import Calculator.operations.IOperation;
 
 import java.io.InputStreamReader;
 

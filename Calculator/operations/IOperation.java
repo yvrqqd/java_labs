@@ -1,6 +1,6 @@
-package com.task2.operations;
+package Calculator.operations;
 
-import com.task2.calculator.Container;
+import Calculator.calculator.Container;
 
 import java.io.InputStreamReader;
 

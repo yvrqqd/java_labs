@@ -1,28 +1,22 @@
-package com.task2;
+package Calculator;
 
-import com.task2.calculator.ICalculator;
-import com.task2.calculator.CalculatorFactory;
-import com.task2.calculator.fabrics.FileCalculatorFactory;
-import com.task2.calculator.fabrics.ConsoleCalculatorFactory;
+import Calculator.calculator.Calculator;
 
 import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
         String filename;
+        Calculator Calc = new Calculator();
 
         if (args.length != 0) {
             filename = args[0];
             File f = new File(filename);
             if (f.exists() && !f.isDirectory()) {
-                CalculatorFactory calcF = new FileCalculatorFactory();
-                ICalculator fileCalculator = calcF.createCalculator(filename);
-                fileCalculator.calculate();
+                Calc.calculate(1, filename);
             }
         } else {
-            CalculatorFactory calcF = new ConsoleCalculatorFactory();
-            ICalculator consoleCalculator = calcF.createCalculator(null);
-            consoleCalculator.calculate();
+            Calc.calculate(0, "");
         }
     }
 }
