@@ -28,7 +28,7 @@ public class OperationFactory {
         if (_operations.containsKey(command)) {
             return (IOperation) _operations.get(command).getConstructor().newInstance();
         } else {
-            System.out.println("UNKNOWN OPERATION1");
+            System.out.println("UNKNOWN OPERATION");
         }
         return null;
     }
