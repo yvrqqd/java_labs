@@ -1,21 +1,34 @@
 package Calculator.operations;
 
-import Calculator.calculator.Container;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Properties;
 
 public class OperationFactory {
-    public IOperation makeOperation(String operation) {
-        switch (operation) {
-            case "#":
-            case "DEFINE":
-            case "/":
-            case "-":
-            case "*":
-            case "+":
-            case "POP":
-            case "PRINT":
-            case "PUSH":
-            case "SQRT":
-            default: break;
+    private HashMap<String, Class<?>> loadAvailableOperations() {
+        HashMap<String, Class<?>> map = new HashMap<>();
+        try {
+            Properties props = new Properties();
+            props.load(getClass().getClassLoader().getResourceAsStream("Calculator/operations/props"));
+            props.forEach((k,v) -> {
+                try {
+                    map.put(((String) k).trim(), Class.forName((String) v));
+                } catch (ClassNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
+    private final HashMap<String, Class<?>> _operations = loadAvailableOperations();
+    public IOperation makeOperation(String command) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        if (_operations.containsKey(command)) {
+            return (IOperation) _operations.get(command).getConstructor().newInstance();
+        } else {
+            System.out.println("UNKNOWN OPERATION1");
         }
         return null;
     }

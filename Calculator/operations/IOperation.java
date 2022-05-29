@@ -1,9 +1,9 @@
 package Calculator.operations;
 
-import Calculator.calculator.Container;
-
-import java.io.InputStreamReader;
+import Calculator.calculator.CustomContainer;
+import Calculator.exceptions.InvalidNumberOfArgs;
+import Calculator.exceptions.StackDepthException;
 
 public interface IOperation {
-    void operate(Container context, InputStreamReader reader);
+    void operate(CustomContainer context, String[] args) throws InvalidNumberOfArgs, StackDepthException;
 }

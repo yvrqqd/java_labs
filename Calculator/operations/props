@@ -1,0 +1,10 @@
+\# = Calculator.operations.opers.Comment
+DEFINE = Calculator.operations.opers.Define
+/ = Calculator.operations.opers.Divide
+- = Calculator.operations.opers.Minus
+* = Calculator.operations.opers.Multiply
++ = Calculator.operations.opers.Plus
+POP = Calculator.operations.opers.Pop
+PRINT = Calculator.operations.opers.Print
+PUSH = Calculator.operations.opers.Push
+SQRT = Calculator.operations.opers.Sqrt
