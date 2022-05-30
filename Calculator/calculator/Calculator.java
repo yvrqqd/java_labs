@@ -4,14 +4,13 @@ import Calculator.exceptions.InvalidNumberOfArgs;
 import Calculator.exceptions.StackDepthException;
 import Calculator.operations.IOperation;
 import Calculator.operations.OperationFactory;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.Stack;
-
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 public class Calculator {
     private static final Logger logger = Logger.getLogger(Calculator.class);

@@ -5,8 +5,6 @@ import Calculator.exceptions.InvalidNumberOfArgs;
 import Calculator.exceptions.StackDepthException;
 import Calculator.operations.IOperation;
 
-import java.io.InputStreamReader;
-
 public class Pop implements IOperation {
     @Override
     public void operate(CustomContainer context, String[] args) throws InvalidNumberOfArgs, StackDepthException {
