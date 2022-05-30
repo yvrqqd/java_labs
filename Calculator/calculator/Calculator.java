@@ -17,7 +17,7 @@ public class Calculator {
     CustomContainer context = new CustomContainer(new Stack<>(), new HashMap<>());
 
     public void calculate(String filename) {   // 0 = console, 1 = file
-        PropertyConfigurator.configure("log/log.properties");
+        PropertyConfigurator.configure("Calculator/log/log.properties");
         logger.debug("Starting computing");
         OperationFactory Fac = new OperationFactory();
         try {
